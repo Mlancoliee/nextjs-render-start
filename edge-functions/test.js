@@ -11,3 +11,8 @@ export function onRequestPost(context) {
     });
     return res;
 }
+
+export function onRequestGet(context) {
+    Response.redirect('/geo', 302)
+    
+}
