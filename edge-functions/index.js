@@ -7,7 +7,7 @@ export function onRequest(context) {
         status: 200,
         headers: {
             'content-type': 'text/plain',
-            'set-cookie': 'test=hello; Path=/; HttpOnly',
+            'set-cookie': 'test=index; Path=/; HttpOnly',
         },
     });
 }

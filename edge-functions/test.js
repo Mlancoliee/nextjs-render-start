@@ -8,7 +8,6 @@ export function onRequestPost(context) {
         status: 200,
         headers: {
             'content-type': 'text/plain',
-            'set-cookie': cookies
         },
     });
     // res.setCookies(cookies)
