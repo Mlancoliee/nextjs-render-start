@@ -3,5 +3,10 @@ export function onRequest(context) {
     if(url.endsWith('/redirect')) {
         return Response.redirect('/test', 302)
     }
-    return
+    return new Response('Hello from a JavaScript Edge Function!', {
+        status: 200,
+        headers: {
+            'content-type': 'text/plain',
+        },
+    });
 }
