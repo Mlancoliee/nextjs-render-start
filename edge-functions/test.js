@@ -9,6 +9,8 @@ export function onRequestPost(context) {
             'content-type': 'text/plain',
         },
     });
+    const cookies = new Cookies('ssid=helloworld; expires=Sun, 10-Dec-2023 03:10:01 GMT; path=/; domain=.tencentcloud.com; samesite=.tencentcloud.com', true);
+    res.setCookies(cookies)
     return res;
 }
 

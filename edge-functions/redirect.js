@@ -4,11 +4,13 @@ export function onRequest(context) {
   const res = JSON.stringify({
     geo: geo,
   });
-
-  return new Response(res, {
+  const cookies = new Cookies('test=hello',false);
+  const resp = new Response(res, {
     headers: {
       'content-type': 'application/json; charset=UTF-8',
       'Access-Control-Allow-Origin': '*',
     },
   });
+  resp.setCookies(cookies)
+  return resp;
 }
