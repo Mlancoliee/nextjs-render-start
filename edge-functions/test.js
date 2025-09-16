@@ -3,14 +3,15 @@ export function onRequestPost(context) {
     const { request } = context;
     const { url, method } = request;
     const ctx = JSON.stringify(context)
+    const cookies = new Cookies('ssid=helloworld; expires=Sun, 10-Dec-2023 03:10:01 GMT; path=/; domain=.tencentcloud.com; samesite=.tencentcloud.com', true);
     const res = new Response(`${method} ${url} ${ctx}`, {
         status: 200,
         headers: {
             'content-type': 'text/plain',
+            'set-cookie': cookies
         },
     });
-    const cookies = new Cookies('ssid=helloworld; expires=Sun, 10-Dec-2023 03:10:01 GMT; path=/; domain=.tencentcloud.com; samesite=.tencentcloud.com', true);
-    res.setCookies(cookies)
+    // res.setCookies(cookies)
     return res;
 }
 
