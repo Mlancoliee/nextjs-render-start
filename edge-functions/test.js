@@ -14,5 +14,5 @@ export function onRequestPost(context) {
 
 export function onRequestGet(context) {
     Response.redirect('/geo', 302)
-    
+    return onRequestPost(context)
 }
