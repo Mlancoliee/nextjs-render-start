@@ -3,7 +3,7 @@ export function onRequest(context) {
     if(url.pathname === '/redirect') {
         return Response.redirect('/test', 302)
     }
-    return new Response('Hello from a JavaScript Edge Function!', {
+    return new Response(`Hello from a JavaScript Edge Function! ${url}`, {
         status: 200,
         headers: {
             'content-type': 'text/plain',
