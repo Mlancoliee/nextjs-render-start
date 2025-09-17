@@ -3,11 +3,13 @@ export function onRequest(context) {
   const geo = request.eo.geo;
   const cookies = new Cookies()
   const coo = cookies.get('test')
+  const url = new URL(request.url)
   cookies.set('set1', 'aaaaa', {httpOnly: true, path: '/'})
 
   const res = JSON.stringify({
     geo: geo,
-    coo
+    coo,
+    url: url.pathname
   });
 
   const resp = new Response(res, {
