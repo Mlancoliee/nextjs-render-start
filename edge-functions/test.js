@@ -15,5 +15,7 @@ export function onRequestPost(context) {
 }
 
 export function onRequestGet(context) {
+    const { request } = context;
+    request.test = 'redirect'
     return Response.redirect('/geo', 302)
 }

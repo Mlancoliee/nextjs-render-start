@@ -1,6 +1,6 @@
 export function onRequest(context) {
-    const { url } = context.request;
-    if(url === '/redirect') {
+    const url = new URL(context.request.url);
+    if(url.pathname === '/redirect') {
         return Response.redirect('/test', 302)
     }
     return new Response('Hello from a JavaScript Edge Function!', {
