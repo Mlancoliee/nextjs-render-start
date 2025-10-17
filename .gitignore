@@ -31,3 +31,5 @@ next-env.d.ts
 !.edgeone/project.json
 .tef_dist/*
   
+# Local Netlify folder
+.netlify

@@ -13,6 +13,7 @@ export function onRequestPost({request}) {
 }
 
 export function onRequestGet({request}) {
+  console.log('onRequestGet geo.js');
   const geo = request.eo.geo;
   const res = JSON.stringify({
     geo: geo,
