@@ -1,7 +1,7 @@
 export function onRequestPost({request}) {
   const geo = request.eo.geo;
   const res = JSON.stringify({
-    geo: geo;
+    geo: geo
   });
 
   return new Response(res, {
