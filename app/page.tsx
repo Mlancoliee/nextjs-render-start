@@ -170,7 +170,7 @@ interface RenderingCardProps {
 }
 
 function RenderingCard({
-  icon
+  icon,
   title,
   subtitle,
   description,
